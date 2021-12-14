@@ -11,6 +11,10 @@
       <img :src="image" v-bind:alt="text" v-bind:[key]="text">
       <img :="imageObject">
   </div>
+  <div>
+      <p>mensaje original: "{{message}}"</p>
+      <p>mensaje invertido computado: "{{reverseMessage}}"</p>
+  </div>
 </template>
 
 <script>
@@ -33,6 +37,11 @@ export default {
            title: "Logo de Javascript"
        }
    }),
+   computed:{
+       reverseMessage : function() {
+           return this.message.split('').reverse().join('')
+       }
+   },
    methods: {
        increment() {
            this.count += 1;
