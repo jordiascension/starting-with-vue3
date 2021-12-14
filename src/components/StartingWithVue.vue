@@ -30,9 +30,23 @@
   <div v-else-if="type === 'C'">
     C
   </div>
+  <div>
+      <button type="button" class="btn btn-primary"
+       @click="test">Call a method</button>
+      <button type="button" class="btn btn-success"
+       @click="testWithParameter('Pepe')">Call a method with parameter</button>
+  </div>
+  <div>
+      <ul id="for-example">
+          <li v-for="user in users" :key="user.id">
+              {{ user.firstName }}
+          </li>
+      </ul>
+  </div>
 </template>
 
 <script>
+import { ref } from '@vue/reactivity';
 export default {
    name: 'Starting',
    props: {
@@ -63,7 +77,28 @@ export default {
        },
        decrement() {
            this.count -= 1;
+       },
+       test : function() {
+           alert('test function');
+       },
+       testWithParameter: function(name){
+           alert('test function with parameter called ' + name);
        }
+   },
+   setup(props) {
+       alert('The message is ' + props.message);
+       const users = ref([
+           {firstName: 'Frank', lastName: 'Murphy', age: 24},
+           {firstName: 'Vic', lastName: 'Reynolds', age: 30},
+           {firstName: 'Gina', lastName: 'Jabowski', age: 40},
+           {firstName: 'Jessi', lastName: 'Glaser', age: 50},
+           {firstName: 'Jay', lastName: 'Bilzerian', age: 60}
+       ]);
+
+       return {
+           users
+       };
+
    }
 }
 </script>
