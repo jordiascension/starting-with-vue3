@@ -15,6 +15,21 @@
       <p>mensaje original: "{{message}}"</p>
       <p>mensaje invertido computado: "{{reverseMessage}}"</p>
   </div>
+  <div v-if="Math.random() > 0.5">
+      Ahora me ves
+  </div>
+  <div v-else>
+      Ahora no
+  </div>
+  <div v-if="type === 'A'">
+    A
+  </div>
+  <div v-else-if="type === 'B'">
+    B
+  </div>
+  <div v-else-if="type === 'C'">
+    C
+  </div>
 </template>
 
 <script>
