@@ -7,6 +7,10 @@
       <button @click="increment">+</button>
       <button @click="decrement">-</button>
   </div>
+  <div>
+      <img :src="image" v-bind:alt="text" v-bind:[key]="text">
+      <img :="imageObject">
+  </div>
 </template>
 
 <script>
@@ -17,7 +21,17 @@ export default {
        type : {default: 'A', type: String}
    },
    data: () =>({
-       count : 0
+       count : 0,
+       //mapeo de data properties
+       image : "https://lenguajejs.com/javascript/logo.svg",
+       text : "Logo de Javascript",
+       key: "title",
+       //mapeo de objeto
+       imageObject: {
+           src: "https://lenguajejs.com/javascript/logo.svg",
+           alt: "Logo de Javascript",
+           title: "Logo de Javascript"
+       }
    }),
    methods: {
        increment() {
