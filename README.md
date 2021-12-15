@@ -22,3 +22,8 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+npm install -g json-server
+npm install -g newman
+export
+newman run examples/sample-collection.json

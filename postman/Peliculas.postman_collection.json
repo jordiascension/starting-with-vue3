@@ -1,0 +1,56 @@
+{
+	"info": {
+		"_postman_id": "95b1f7d6-5b63-4cf8-bd57-4e3f738045f6",
+		"name": "Peliculas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Peliculas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/peliculas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"peliculas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Pelicula",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"nombre\": \"La familia perfecta\",\r\n        \"director\": \"Arantxa Echevarria\",\r\n        \"clasificacion\": \"Comedia\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/peliculas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"peliculas"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
