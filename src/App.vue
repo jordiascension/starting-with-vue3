@@ -1,17 +1,18 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
   <!--<HelloWorld msg="Welcome to Your Vue.js App"/>-->
-  <Starting message="Welcome to Your Vue.js App" type="C"/>
+  <Parent/>
 </template>
 
 <script>
 //import HelloWorld from './components/HelloWorld.vue'
-import Starting from './components/StartingWithVue.vue'
+//import Starting from './components/StartingWithVue.vue'
+import Parent from './components/Parent.vue'
 
 export default {
   name: 'App',
   components: {
-    Starting
+    Parent
   }
 }
 </script>
