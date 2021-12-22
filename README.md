@@ -29,3 +29,4 @@ export
 newman run examples/sample-collection.json
 
 You can run your webapplication with json-server
+New documentation included
