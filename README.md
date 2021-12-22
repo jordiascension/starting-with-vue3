@@ -27,3 +27,5 @@ npm install -g json-server
 npm install -g newman
 export
 newman run examples/sample-collection.json
+
+You can run your webapplication with json-server
